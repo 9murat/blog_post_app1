@@ -26,7 +26,7 @@ export default function BlogList() {
       {posts.map((post, i) => (
         <div key={i} className='blog_list_wrapper'>
           <div className='blog_list_blog_info' onClick={() => navigate(`/blogList/${post.id}`)}>
-            <div className='blog_list_header'>{post.id}</div>
+            <div className='blog_list_header'>{post.header}</div>
             <div className='blog_list_body' >{truncateText(post.body, 3)}</div>
           </div>
           <div className='blog_list_userInfo' onClick={() => navigate(`/userDetail/${post.userId}`)}>
